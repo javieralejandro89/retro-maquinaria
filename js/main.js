@@ -280,28 +280,7 @@ function initWhatsAppButton() {
                     'event_label': 'floating_button'
                 });
             }
-        });
-
-        // Animate on scroll
-        let isVisible = true;
-        window.addEventListener('scroll', function() {
-            const scrollTop = window.pageYOffset;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-            
-            // Hide when near bottom to avoid overlapping with footer
-            if (scrollTop + windowHeight > documentHeight - 200) {
-                if (isVisible) {
-                    whatsappBtn.style.transform = 'translateY(100px)';
-                    isVisible = false;
-                }
-            } else {
-                if (!isVisible) {
-                    whatsappBtn.style.transform = 'translateY(0)';
-                    isVisible = true;
-                }
-            }
-        });
+        });        
     }
 }
 

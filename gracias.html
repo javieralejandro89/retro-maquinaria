@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Gracias por tu Interés - Retro Maquinaria</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .thank-you-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(253, 185, 0, 0.1) 0%, transparent 70%);
+        }
+
+        .thank-you-content {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            text-align: center;
+            max-width: 600px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #FDB900, #E5A600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 3rem;
+            color: #1a1a1a;
+            animation: checkmark 0.6s ease-in-out;
+        }
+
+        @keyframes checkmark {
+            0% { transform: scale(0); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .thank-you-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .thank-you-message {
+            font-size: 1.2rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .contact-info {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-item i {
+            color: #FDB900;
+            font-size: 1.2rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .next-steps {
+            background: #FDB900;
+            color: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            font-weight: 600;
+        }
+
+        .btn-yellow {
+            background: linear-gradient(135deg, #FDB900, #E5A600);
+            border: none;
+            color: #1a1a1a;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .btn-yellow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            color: #1a1a1a;
+        }
+
+        .countdown {
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <section class="thank-you-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="thank-you-content">
+                        <div class="success-icon">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        
+                        <h1 class="thank-you-title">¡Gracias por tu Interés!</h1>
+                        
+                        <p class="thank-you-message">
+                            Hemos recibido tu solicitud correctamente. Nuestro equipo de especialistas 
+                            revisará tu información y se pondrá en contacto contigo dentro de las próximas 
+                            <strong>24 horas</strong> para brindarte la mejor cotización.
+                        </p>
+                        
+                        <div class="next-steps">
+                            <strong>📋 Próximos Pasos:</strong><br>
+                            1. Revisaremos tu solicitud<br>
+                            2. Preparamos una propuesta personalizada<br>
+                            3. Te contactamos para afinar detalles
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h4 style="color: #1a1a1a; margin-bottom: 1.5rem;">
+                                <i class="fas fa-phone" style="color: #FDB900;"></i>
+                                ¿Necesitas una respuesta inmediata?
+                            </h4>
+                            
+                            <div class="contact-item">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp: +52 614 721 0202</span>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>Teléfono: +52 614 721 0202</span>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email: eduardoherrerabeltran02@gmail.com</span>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex gap-3 justify-content-center flex-wrap">
+                            <a href="https://wa.me/526147210202?text=Hola, acabo de enviar una solicitud de cotización y me gustaría acelerar el proceso" 
+                               class="btn btn-yellow" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
+                            </a>
+                            
+                            <a href="/" class="btn btn-outline-secondary">
+                                <i class="fas fa-home"></i> Volver al Inicio
+                            </a>
+                        </div>
+                        
+                        <div class="countdown">
+                            <i class="fas fa-clock"></i>
+                            Serás redirigido al inicio en <span id="countdown">10</span> segundos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Countdown and redirect
+        let timeLeft = 10;
+        const countdownElement = document.getElementById('countdown');
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = '/';
+            }
+        }, 1000);
+
+        // Google Analytics tracking
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'form_submission', {
+                'event_category': 'conversion',
+                'event_label': 'contact_form'
+            });
+        }
+
+        // Add animation on load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.thank-you-content').style.animation = 'fadeInUp 0.8s ease-out';
+        });
+    </script>
+
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>

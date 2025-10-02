@@ -73,10 +73,10 @@ body {
 /* Custom Button Styles */
 .btn-yellow {
     background: linear-gradient(135deg, var(--primary-yellow), var(--dark-yellow));
-    border: none;
+    border: 2px solid transparent;
     color: var(--primary-black);
     font-weight: 600;
-    padding: 12px 30px;
+    padding: 12px 28px;
     border-radius: 50px;
     transition: var(--transition);
     text-decoration: none;
@@ -84,6 +84,9 @@ body {
     align-items: center;
     gap: 8px;
     box-shadow: var(--shadow);
+    min-width: 160px;
+    justify-content: center;
+    height: 50px;
 }
 
 .btn-yellow:hover {
@@ -98,13 +101,16 @@ body {
     color: var(--primary-yellow);
     background: transparent;
     font-weight: 600;
-    padding: 12px 30px;
+    padding: 12px 28px;
     border-radius: 50px;
     transition: var(--transition);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    min-width: 160px;
+    justify-content: center;
+    height: 50px;
 }
 
 .btn-outline-yellow:hover {
@@ -112,6 +118,15 @@ body {
     color: var(--primary-black);
     transform: translateY(-3px);
     box-shadow: var(--shadow);
+}
+
+.hero-buttons .btn {
+    flex: 1;
+    max-width: 200px;
+    min-width: 180px;
+    height: 50px;
+    font-size: 1rem;
+    padding: 14px 25px;
 }
 
 .btn-cta {
@@ -132,14 +147,20 @@ body {
 
 /* Navigation */
 .custom-navbar {
-    background: rgba(26, 26, 26, 0.95);
+    background: rgb(26, 26, 26);
     backdrop-filter: blur(10px);
     transition: var(--transition);
     padding: 5px 0;
 }
 
+.custom-navbar .container {
+    padding-left: 20px;
+    padding-right: 30px;
+    max-width: 100%;
+}
+
 .custom-navbar.scrolled {
-    background: rgba(26, 26, 26, 0.98);
+    background: rgba(26, 26, 26, 0.76);
     padding: 10px 0;
 }
 
@@ -152,6 +173,7 @@ body {
     color: var(--primary-yellow) !important;
     text-decoration: none;
     transition: var(--transition);
+    margin-left: -10px;
 }
 
 .navbar-brand:hover {
@@ -199,6 +221,13 @@ body {
 .navbar-nav .nav-link:hover::before {
     left: 100%;
 }
+.navbar-cta {
+    margin-right: -10px;
+}
+
+.navbar-cta .btn-cta {
+    margin-left: 10px;
+}
 
 /* Hero Section */
 .hero-section {
@@ -233,6 +262,25 @@ body {
 .hero-content {
     position: relative;
     z-index: 2;
+    padding-left: 15px;
+}
+
+.hero-content .container {
+    max-width: 1200px;
+}
+
+.hero-content .row {
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content .col-lg-6:first-child {
+    padding-right: 40px;
+}
+
+.hero-content .col-lg-6:last-child {
+    padding-left: 20px;
+    padding-right: 15px;
 }
 
 .hero-title {
@@ -243,6 +291,7 @@ body {
     margin-bottom: 1rem;
     line-height: 1.1;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-left: 0;
 }
 
 .hero-title .highlight {
@@ -273,12 +322,16 @@ body {
 
 .hero-image {
     position: relative;
+    
 }
 
 .hero-image img {
     border-radius: 20px;
     box-shadow: var(--shadow-hover);
     transition: var(--transition);
+    width: 100%;
+    margin-left: auto;
+    display: block;
 }
 
 .hero-image:hover img {
@@ -626,10 +679,11 @@ body {
 
 .contact-info {
     background: var(--primary-black);
-    padding: 2.5rem;
+    padding: 3rem 2.5rem;
     border-radius: 20px;
     color: var(--white);
-    height: fit-content;
+    
+    min-height: fit-content;
 }
 
 .contact-info h3 {
@@ -739,15 +793,38 @@ body {
 
 .footer-contact p {
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+.footer-contact p:hover {
+    color: var(--primary-yellow);
+    transform: translateX(5px);
+}
+
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 1rem;
+}
+
+.footer-contact a:hover {
+    color: var(--primary-yellow);
+    transform: translateX(5px);
 }
 
 .footer-contact i {
     color: var(--primary-yellow);
-    width: 16px;
+    width: 20px;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .social-links {
@@ -824,7 +901,7 @@ body {
 /* Back to Top Button */
 .back-to-top {
     position: fixed;
-    bottom: 30px;
+    bottom: 40px;
     left: 30px;
     width: 50px;
     height: 50px;
@@ -848,6 +925,10 @@ body {
 .back-to-top:hover {
     background: var(--dark-yellow);
     transform: translateY(-3px);
+}
+
+.contact-section .row {
+    align-items: stretch;
 }
 
 /* Responsive Design */
@@ -877,6 +958,18 @@ body {
         padding: 15px;
         border-radius: 50%;
     }
+    
+}
+@media (min-width: 1200px) {
+    .contact-section .col-lg-8 {
+        flex: 0 0 58%;
+        max-width: 58%;
+    }
+    
+    .contact-section .col-lg-4 {
+        flex: 0 0 42%;
+        max-width: 42%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -895,12 +988,18 @@ body {
     .hero-buttons {
         flex-direction: column;
         align-items: stretch;
+        gap: 15px;
     }
     
     .hero-buttons .btn {
-        text-align: center;
-        justify-content: center;
-    }
+    text-align: center;
+    justify-content: center;
+    width: 98%;
+    max-width: none;
+    min-width: auto;
+    height: 50px;
+    font-size: 1rem;
+}
     
     .section-title {
         font-size: 2rem;
@@ -921,8 +1020,22 @@ body {
     }
     
     .navbar-cta {
-        margin-top: 1rem;
+        margin-top: 1rem;        
     }
+    .hero-content .col-lg-6:first-child {
+        padding-right: 15px;
+        margin-top: 5rem;
+    }
+    
+    .hero-content .col-lg-6:last-child {
+        padding-left: 15px;
+    }
+    
+    .navbar-brand {
+        margin-left: 0;
+    }   
+     
+   
 }
 
 @media (max-width: 576px) {
