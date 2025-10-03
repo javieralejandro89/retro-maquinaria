@@ -738,6 +738,26 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.contact-item .contact-details small {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.contact-item .contact-details a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-item .contact-details a:hover {
+    color: var(--primary-yellow);
+}
+
+.footer-contact a small {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
 /* Footer */
 .footer {
     background: var(--primary-black);
