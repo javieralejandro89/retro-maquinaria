@@ -551,6 +551,21 @@ body {
     color: var(--primary-yellow);
     font-size: 0.9rem;
 }
+.machinery-section .row {
+    justify-content: center;
+}
+
+.machinery-section .col-lg-4:nth-child(4) {
+    margin-top: 2rem;
+}
+
+.machinery-section .col-lg-4:nth-child(5) {
+    margin-top: 2rem;
+}
+
+.machinery-section .col-lg-4:nth-child(6) {
+    margin-top: 2rem;
+}
 
 /* About Section */
 .about-section {
@@ -977,6 +992,17 @@ body {
     .whatsapp-btn {
         padding: 15px;
         border-radius: 50%;
+    }
+    .machinery-section .col-lg-4:nth-child(4) {
+        margin-top: 2rem;
+    }
+    
+    .machinery-section .col-lg-4:nth-child(5) {
+        margin-top: 2rem;
+    }
+    
+    .machinery-section .col-lg-4:nth-child(6) {
+        margin-top: 2rem;
     }
     
 }
